@@ -1,94 +1,80 @@
-# Email Spam Detection with Machine Learning
+<h1 align="center">Email/SMS Spam Detection</h1>
 
-**Oasis Infobyte Internship Project** - [**Credentials**](https://drive.google.com/file/d/1uDjGZcWln07jb0dL60Yuz_33Ck78DQXF/view?usp=drive_link)
+<p align="center">
+  <img src="https://www.easyspace.com/blog/wp-content/uploads/2019/03/spam-1.png"/>
+</p>
 
-![MasterHead](https://www.easyspace.com/blog/wp-content/uploads/2019/03/spam-1.png)
-
-<font size="1">Image Courtesy: https://www.easyspace.com/blog/wp-content/uploads/2019/03/spam-1.png</font>
-
-Click on the following link to checkout the colab file.
-- [Colab](https://colab.research.google.com/drive/1ggzEa68D7EJ3zerlhMqZAXv5_kC85bYg?usp=sharing)
+Click on the following link to checkout the Website.
+- [Live Website](https://email-sms-spam-classifier-xm86.onrender.com)
 
 
 ---
 
-## Problem Statement
+## <br>**➲ Project description**
+Email spam detection system is used to detect email spam using Machine Learning technique called Natural Language Processing and Python, where we have a dataset contain a lot of emails by extract important words and then use naive classifier we can detect if this email is spam or not.
+
+## <br>**➲ Problem Statement**
 
 Email spam, or junk mail, remains a persistent issue, flooding inboxes with unsolicited and often malicious content. These emails may contain cryptic messages, scams, or, most dangerously, phishing attempts. Our task, undertaken during an engaging data science internship provided by Oasis Infobyte, is to create an effective email spam detection system using Python and machine learning.
 
-**Project Objectives:**
+## <br>**➲ Prerequisites**
+This is list of required packages and modules for the project to be installed :
+* <a href="https://www.python.org/downloads/" target="_blank">Python 3.x</a>
+* Pandas 
+* Numpy
+* Scikit-learn
+* NLTK
 
-1. **Data Preprocessing:** Our project begins with the preprocessing of a substantial email dataset, encompassing tasks such as data cleaning, handling missing values, and converting text data into a format suitable for machine learning.
+Install all required packages :
+ ```sh
+  pip install -r requirements.txt
+  ```
 
-2. **Email Feature Engineering:** Email data presents unique characteristics. We focus on engineering specific email features, such as the sender's address, recipient list, subject line, and email body, to create meaningful inputs for our spam detection model.
+<!-- THE DATASET -->
+## <br>**➲ The Dataset**
+Human activites dataset contain about 5728 record which is a sample of an email
+and a target column "spam" which describe the state of an email spam or not.<br>
 
-3. **Machine Learning Model Selection:** We aim to design and evaluate a robust spam detection model. Our choice of machine learning algorithms, including decision trees, support vector machines, and neural networks, seeks to maximize the model's effectiveness.
+<!-- CODING SECTIONS -->
+## <br>**➲ Coding Sections**
+In this part we will see the project code divided to sections as follows:
+<br>
 
-4. **Model Evaluation:** To assess the model's performance, we employ metrics like accuracy, precision, recall, F1-score, and ROC-AUC to ensure a comprehensive understanding of its effectiveness.
+- Section 1 | The Data :<br>
+In this section we aim to do some operations on the dataset before training the model on it,
+processes like :
+  1. Data Loading : Load the dataset
+  2. Data Visualization : Visualize dataset features
+  3. Data Cleaning : Remove stopwords and duplicates values
+  4. Data Splitting : Split the dataset into training and testing sets<br><br>
 
-5. **Hyperparameter Tuning:** The project involves fine-tuning model hyperparameters to optimize predictive accuracy and minimize false positives, which can have a significant impact in the context of email spam detection.
+- Section 2 | The Model :<br>
+The dataset is ready for training, so we create a naive classifier using scikit-learn and thin fit it to the data, and finally we evaluate the model by getting accuracy, classification report and confusion matrix<br>
 
-6. **Cross-Validation and Generalization:** Rigorous cross-validation techniques and testing on dedicated datasets are applied to confirm the model's ability to generalize to new, previously unseen email data.
+<!-- INSTALLATION -->
+## ➲ Installation
+1. Clone the repo
+   ```sh
+   git clone https://github.com/tushar8057/Email-SMS-Spam-Classifier.git
+   ```
+2. Open 'app.py' in VScode and enjoy
 
-7. **Practical Application:** We explore practical deployment strategies, considering how the spam detection model could be integrated into email filtering systems, improving email security, and enhancing user experience.
+## <br>**➲ Model Deployment** 
+The file ```app.py``` contains the complete code for deployment which is deployed in Streamlit. Streamlit is an open-source Python library that allows you to create interactive web applications for machine learning and data science projects.
 
-8. **Ethical Considerations:** The project addresses ethical concerns related to privacy and data security by ensuring that email content and sender identities are handled with sensitivity.
+To run the app.py file, Execute the following Command in your command prompt
 
-9. **Challenges and Future Work:** Identifying potential challenges in email spam detection, including evasive techniques used by spammers, and proposing avenues for future work and research in this domain.
+ ```sh
+    streamlit run app.py
+  ```
 
-This project encapsulates the power of machine learning in addressing real-world challenges and promises a future where spam emails will no longer plague our inboxes.
+<p align="center">
+  <img src="home_screen.png"/>
+</p>
 
----
-
-## Project Summary
-
-In today's digital age, the challenge of combating spam emails is more pressing than ever. Spam emails, or junk mail, inundate our inboxes with unsolicited and often malicious content, ranging from cryptic messages to scams and phishing attempts. To address this issue, we embarked on an exciting data science internship project offered by Oasis Infobyte.
-
-**Project Highlights:**
-
-1. **Data Preprocessing:** Our journey began with the preprocessing of a sizable dataset of emails. This phase involved data cleaning, handling missing values, and transforming text data into a suitable format for machine learning.
-
-2. **Feature Extraction:** We explored various techniques for feature extraction, striving to capture the essential characteristics of spam emails. This process was crucial in preparing the data for model training.
-
-3. **Machine Learning Models:** We employed a range of machine learning algorithms to train and evaluate the spam detection model. These models included decision trees, support vector machines, and more.
-
-4. **Evaluation Metrics:** To ensure the model's effectiveness, we carefully selected evaluation metrics such as accuracy, precision, recall, and F1-score. These metrics provided valuable insights into the model's performance.
-
-5. **Tuning and Optimization:** Fine-tuning hyperparameters and optimizing the model was a critical step to enhance its predictive accuracy.
-
-6. **Validation:** Rigorous cross-validation and validation on a test dataset were performed to verify the model's ability to generalize to new, unseen data.
-
-7. **Deployment:** We discussed potential deployment strategies for the spam detection model, highlighting its real-world applicability in email filtering.
-
-The completion of this project not only equipped us with practical data science skills but also contributed to the ongoing battle against email spam. The project's success was a testament to the power of machine learning in addressing real-world challenges.
-
----
-
-## Conclusion
-
-In the world of email communication, the battle against spam messages is an ongoing challenge. Our journey in this project was to develop a robust email spam detector using Python and machine learning techniques. We wanted to equip users with a tool that can distinguish between legitimate emails (ham) and unsolicited, often harmful, spam emails.
-
-**Key Insights:**
-
-- Our dataset revealed an interesting distribution, with approximately 13.41% of messages being categorized as spam and the remaining 86.59% as ham. This distribution served as a crucial starting point for our analysis.
-
-- During the EDA process, we identified common keywords frequently found in spam messages, such as 'free,' 'call,' 'text,' 'txt,' and 'now.' These words often trigger spam filters and were important features for our machine learning model.
-
-- Our journey through machine learning brought us to a standout performer - the Multinomial Naive Bayes model. This model exhibited exceptional accuracy, achieving an impressive score of 98.49% on the recall test set. This outcome signifies the model's exceptional ability to accurately identify and filter out spam emails, thereby contributing to enhanced email security and a superior user experience.
-
-In conclusion, this project has demonstrated that machine learning, combined with effective feature engineering and model selection, can be a powerful tool in the ongoing battle against email spam. By implementing this spam detection system, we've taken a significant step towards minimizing the impact of spam messages on email users' lives.
-
-Email inboxes are now a safer place, thanks to the successful implementation of our email spam detection system. As we conclude this project, we look forward to continued improvements and innovations in email security.
-
-Let's keep our inboxes spam-free and our communications secure.
-
----
-
-## Author
-
-- [Arindam Paul](https://www.linkedin.com/in/arindam-paul-19a085187/)
-
----
-
-## Reference
- - [Oasis Infobyte](https://oasisinfobyte.com/)
+<!-- REFERENCES -->
+## <br>**➲ References**
+These links may help you to better understanding of the project idea and techniques used :
+1. Spam detection in machine learning : https://bit.ly/3nwiKtA
+2. Naive-bayes algorithm : https://bit.ly/3zc9SLH
+3. Model evaluation : https://bit.ly/3B12VOO
