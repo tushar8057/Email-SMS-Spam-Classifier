@@ -1,0 +1,9 @@
+nltk
+numpy
+pandas
+scikit-learn
+streamlit
+seaborn
+matplotlib
+wordcloud
+&& python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab'); nltk.download('stopwords')"
