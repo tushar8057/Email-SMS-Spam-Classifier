@@ -6,3 +6,5 @@ streamlit
 seaborn
 matplotlib
 wordcloud
+speechrecognition
+pyaudio
