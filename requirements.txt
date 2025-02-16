@@ -7,4 +7,4 @@ seaborn
 matplotlib
 wordcloud
 speechrecognition
-pyaudio
+PyAudio
